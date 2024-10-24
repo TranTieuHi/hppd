@@ -126,12 +126,6 @@ body {
     padding: 10px;
 }
 
-@keyframes animate {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-
 
 .arrow-container {
     position: relative;
@@ -154,3 +148,14 @@ body {
     border-top: 20px solid #ff7300; /* Arrow color */
     margin: 0 auto;
 }
+
+
+
+
+@keyframes animate {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
