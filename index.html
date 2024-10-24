@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Phạm Huỳnh Tú Anh</title>
+    <title>Chúc Mừng Sinh Nhật Nha</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap" rel="stylesheet"/>
     <link rel="shortcut icon" type="image/png" href="birthday.png">
     <link rel="stylesheet" href="style.css">
@@ -312,12 +312,27 @@
                    
                 </p>
             </div>
-            <button class="button" id="loadNewContent">Những Bông Hoa Dành Tặng</button>
+            
         </div>
+
         <div id="newContent"></div>
+       
+        <div class="arrow-container">
+            <div class="arrow-text">Nhấn vào đây trước nè!</div>
+            <div class="arrow"></div>
+        </div>
+
         <div class="right-col">
             <img src="images/play.png" id="icon" style="cursor: pointer; width: 50px;">
         </div>
+
+        <div class="arrow-container">
+            <div class="arrow-text">Xong rồi ấn vào đây!</div>
+            <div class="arrow"></div>
+        </div>
+
+        <button class="button" id="loadNewContent">Những Bông Hoa Dành Tặng</button>
+
     </div>
     <span id="count"></span>
     <div class="lording">
@@ -362,7 +377,10 @@
 
         // Load new content without refreshing the page
         $('#loadNewContent').click(function() {
-            $('#newContent').load('indexFlower.html');
+            $('#newContent').load('indexFlower.html', function() {
+                // Hide the arrows after the new content is loaded
+                $('.arrow-container').fadeOut(500); // Fade out smoothly
+            });
         });
     </script>
 </body>

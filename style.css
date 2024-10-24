@@ -131,3 +131,26 @@ body {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+
+.arrow-container {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.arrow-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #ff7300; /* Arrow color */
+    margin: 0 auto;
+}
